@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #080b0f;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    max-width: 600px;
+    min-height: 100vh;
+    margin: auto;
+    background: #0d1117;
+}
+
+header {
+    padding: 22px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #222b35;
+}
+
+header h1 {
+    font-size: 26px;
+}
+
+header p {
+    color: #8b949e;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.online {
+    color: #3fb950;
+    font-size: 18px;
+}
+
+main {
+    padding: 18px;
+    padding-bottom: 100px;
+}
+
+.welcome {
+    padding: 20px;
+    border-radius: 20px;
+    background: #151b23;
+    border: 1px solid #26313d;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.big-icon {
+    font-size: 32px;
+    background: #1f6feb;
+    padding: 12px;
+    border-radius: 15px;
+}
+
+.welcome h2 {
+    font-size: 20px;
+}
+
+.welcome p {
+    color: #8b949e;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+main > h3 {
+    margin: 25px 2px 12px;
+    font-size: 18px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.grid > button:first-child {
+    min-height: 230px;
+    padding: 15px;
+    text-align: left;
+    color: white;
+    background: #151b23;
+    border: 1px solid #26313d;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.grid > button:first-child:active {
+    transform: scale(0.97);
+}
+
+.grid > button:first-child span {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.grid > button:first-child b {
+    display: block;
+    font-size: 14px;
+}
+
+.grid > button:first-child small {
+    display: block;
+    color: #8b949e;
+    margin-top: 6px;
+}
+
+.tool-box {
+    min-height: 230px;
+    padding: 15px;
+    background: #151b23;
+    border: 1px solid #26313d;
+    border-radius: 18px;
+}
+
+.tool-box > span {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.tool-box > b {
+    display: block;
+    font-size: 14px;
+}
+
+.tool-box > small {
+    display: block;
+    color: #8b949e;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+.tool-box input {
+    width: 100%;
+    padding: 11px;
+    background: #0d1117;
+    color: white;
+    border: 1px solid #303b48;
+    border-radius: 10px;
+    outline: none;
+    font-size: 13px;
+}
+
+.tool-box input::placeholder {
+    color: #68727d;
+}
+
+.tool-box input:focus {
+    border-color: #1f6feb;
+}
+
+.search-button {
+    width: 100%;
+    margin-top: 9px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #1f6feb;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-button:active {
+    transform: scale(0.97);
+}
+
+.result {
+    margin-top: 16px;
+    padding: 18px;
+    border-radius: 18px;
+    background: #151b23;
+    border: 1px solid #26313d;
+}
+
+.result h3 {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+#output {
+    color: #c9d1d9;
+    font-size: 14px;
+    line-height: 1.8;
+    word-break: break-word;
+}
+
+#output b {
+    color: white;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    height: 70px;
+    background: #0d1117;
+    border-top: 1px solid #222b35;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav button {
+    width: 33%;
+    border: 0;
+    background: transparent;
+    color: #8b949e;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav button:active {
+    transform: scale(0.95);
+}
+
+nav button small {
+    display: block;
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+@media (max-width: 420px) {
+    main {
+        padding: 14px;
+    }
+
+    .grid {
+        gap: 8px;
+    }
+
+    .tool-box,
+    .grid > button:first-child {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 340px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid > button:first-child {
+        min-height: 170px;
+    }
+
+    .tool-box {
+        min-height: 200px;
+    }
+}
