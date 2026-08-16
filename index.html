@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d1117">
+
+    <title>GeoLookup</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/libphonenumber-js@1.12.17/bundle/libphonenumber-max.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+    <header>
+        <div>
+            <h1>GeoLookup</h1>
+            <p>Location & Network Tools</p>
+        </div>
+
+        <span class="online">●</span>
+    </header>
+
+    <main>
+
+        <section class="welcome">
+            <div class="big-icon">📍</div>
+
+            <div>
+                <h2>Welcome</h2>
+                <p>
+                    Look up locations, coordinates,
+                    IP addresses and phone-number information.
+                </p>
+            </div>
+        </section>
+
+        <h3>Tools</h3>
+
+        <div class="grid">
+
+            <button onclick="getLocation()">
+                <span>📍</span>
+                <b>My Coordinates</b>
+                <small>Find your location</small>
+            </button>
+
+            <div class="tool-box">
+                <span>🧭</span>
+                <b>Coordinate Lookup</b>
+                <small>Enter latitude and longitude</small>
+
+                <input
+                    id="coordinateInput"
+                    type="text"
+                    placeholder="43.0371, -81.1540"
+                >
+
+                <button
+                    class="search-button"
+                    onclick="coordinateLookup()">
+                    Search
+                </button>
+            </div>
+
+            <div class="tool-box">
+                <span>🌐</span>
+                <b>IP Lookup</b>
+                <small>Enter an IP address</small>
+
+                <input
+                    id="ipInput"
+                    type="text"
+                    placeholder="8.8.8.8"
+                >
+
+                <button
+                    class="search-button"
+                    onclick="ipLookup()">
+                    Search
+                </button>
+            </div>
+
+            <div class="tool-box">
+                <span>🛰️</span>
+                <b>ISP Lookup</b>
+                <small>Enter an IP address</small>
+
+                <input
+                    id="ispInput"
+                    type="text"
+                    placeholder="8.8.8.8"
+                >
+
+                <button
+                    class="search-button"
+                    onclick="ispLookup()">
+                    Search
+                </button>
+            </div>
+
+            <div class="tool-box">
+                <span>📞</span>
+                <b>Number Lookup</b>
+                <small>Enter an international number</small>
+
+                <input
+                    id="phoneInput"
+                    type="tel"
+                    placeholder="+1 519 555 1234"
+                >
+
+                <button
+                    class="search-button"
+                    onclick="phoneLookup()">
+                    Search
+                </button>
+            </div>
+
+        </div>
+
+        <section class="result">
+
+            <h3>Result</h3>
+
+            <div id="output">
+                Choose a tool above.
+            </div>
+
+        </section>
+
+    </main>
+
+    <nav>
+
+        <button onclick="location.reload()">
+            ⌂
+            <small>Home</small>
+        </button>
+
+        <button onclick="getLocation()">
+            📍
+            <small>Location</small>
+        </button>
+
+        <button onclick="document.getElementById('ipInput').focus()">
+            🌐
+            <small>Network</small>
+        </button>
+
+    </nav>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
